@@ -5,7 +5,7 @@ import { MdAir } from "react-icons/md";
 import { CiTempHigh } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
 
-export interface WearherDetailProps {
+interface WearherDetailProps {
     data: {
         current: {
             wind_mph: number;
