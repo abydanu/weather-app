@@ -11,6 +11,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Weather App",
   description: "Aplikasi Untuk Caca",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
