@@ -59,16 +59,15 @@ Buka http://localhost:3000 di browser
 ## 📁 Struktur Folder
 
 ```bash
-├── app/                 # Folder utama Next.js App Router
-│   ├── page.tsx         # Halaman utama
-│   └── components/      # Komponen
-├── public/              # Aset publik (ikon, gambar)
-├── styles/              # File style tambahan jika ada
-├── utils/               # File Utility
-├── .env                 # File environment
-├── tailwind.config.ts   # Konfigurasi Tailwind
+├── app/
+│   ├── component/       # Komponen UI
+│   ├── utils/           # Fungsi utilitas
+│   ├── layout.tsx       # Layout utama aplikasi
+│   └── page.tsx         # Halaman utama
+├── public/              # Aset publik (ikon)
+├── package.json         # Konfigurasi npm dan dependensi
 ├── next.config.ts       # Konfigurasi Next.js
-├── tsconfig.json        # Konfigurasi TypeScript
-└── package.json         # Dependensi
+└── tsconfig.json        # Konfigurasi TypeScript
+
 ```
 
