@@ -1,6 +1,6 @@
 # 🌤️ Weather App
 
-Aplikasi cuaca berbasis web yang dibangun dengan **Next.js 13**, **TypeScript**, dan **Tailwind CSS**. Aplikasi ini menampilkan informasi cuaca terkini berdasarkan lokasi pengguna dengan tampilan antarmuka yang modern dan responsif.
+Aplikasi cuaca berbasis web yang dibangun dengan **Next.js**, **TypeScript**, dan **Tailwind CSS**. Aplikasi ini menampilkan informasi cuaca terkini berdasarkan lokasi pengguna dengan tampilan antarmuka yang modern dan responsif.
 
 ---
 
