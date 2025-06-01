@@ -4,26 +4,10 @@ import { WiHumidity } from "react-icons/wi";
 import { MdAir } from "react-icons/md";
 import { CiTempHigh } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
+import { WeatherData } from "../types/weather";
 
 interface WearherDetailProps {
-    data: {
-        current: {
-            wind_mph: number;
-            humidity: number;
-            wind_dir: string;
-            pressure_mb: number;
-            feelslike_f: number;
-            vis_km: number;
-        };
-        forecast: {
-            forecastday: {
-                astro: {
-                    sunrise: string;
-                    sunset: string;
-                };
-            }[]
-        }
-    }
+    data: WeatherData
 }
 
 const WeatherDetail = ({ data }: WearherDetailProps) => {

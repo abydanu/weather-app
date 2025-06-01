@@ -1,21 +1,8 @@
-interface DayForecast {
-    date: string;
-    day: {
-        condition: {
-            icon: string;
-            text: string;
-        };
-        maxtemp_f: number;
-        mintemp_f: number;
-    };
-}
+import { WeatherData } from "../types/weather"
+
 
 interface WeekForecastProps {
-    data: {
-        forecast: {
-            forecastday: DayForecast[];
-        };
-    };
+    data: WeatherData
 }
 
 const WeekForecast = ({ data }: WeekForecastProps) => {

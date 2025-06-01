@@ -1,20 +1,9 @@
+import { WeatherData } from "../types/weather";
 import { getCurrentDate } from "../utils/currentDate";
 import { IoLocationSharp } from "react-icons/io5";
 
 interface CurrentProps {
-    data: {
-        current: {
-            condition: {
-                icon: string;
-                text: string;
-            };
-            temp_f: number;
-        };
-        location: {
-            name: string;
-            region: string;
-        }
-    }
+    data: WeatherData
 }
 
 const Current = ({ data }: CurrentProps) => {
