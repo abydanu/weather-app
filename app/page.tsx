@@ -15,27 +15,38 @@ const Home = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}&days=7&aqi=yes&alerts=yes`;
+const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
 
-  const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      setIsLoading(true);
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error();
-        const json = await response.json();
-        setData(json);
-        setLocation("");
-        setError("");
-      } catch (error) {
-        setError("Kota tidak di Temukan!");
-        setData(null);
-      } finally {
-        setIsLoading(false);
-      }
+    if (!location.trim()) {
+      setError("Silakan masukkan nama kota!");
+      return;
     }
-  };
+
+    setIsLoading(true);
+    try {
+      const url = `/api/weather?q=${location}`;
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error("Gagal mengambil data");
+      }
+
+      const json = await response.json();
+      setData(json);
+      setLocation("");
+      setError("");
+    } catch (error) {
+      setError("Kota tidak ditemukan!");
+      setData(null);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+};
+
+
 
   let content;
   if (!data && error === '') {
