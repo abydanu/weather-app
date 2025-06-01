@@ -2,6 +2,7 @@
 
 Aplikasi cuaca berbasis web yang dibangun dengan **Next.js**, **TypeScript**, dan **Tailwind CSS**. Aplikasi ini menampilkan informasi cuaca terkini berdasarkan lokasi pengguna dengan tampilan antarmuka yang modern dan responsif.
 
+[Kunjungi Web nya](https://abydanu-weather-app.vercel.app/)
 ---
 
 ## ✨ Fitur
@@ -42,7 +43,7 @@ yarn install
 
 buat file **.env** di direktori root, lalu isi seperti ini
 ```bash
-NEXT_PUBLIC_WEATHER_API_KEY = # masukkan_api_key_anda_disini
+WEATHER_API_KEY = # masukkan_api_key_anda_disini
 ```
 
 4. **Jalankan aplikasi**
